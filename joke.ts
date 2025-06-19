@@ -61,6 +61,9 @@ class NameChecker extends  Checkable {
   const aggregatedArray = numbArray.reduce((sum, price)=>sum + price, 5)
   console.log("aggregatedArray: ", aggregatedArray)
   
+  function clownFunction<T>(param: T): T {
+    return param
+  }
 
   class Boxer<Type, Type2, Diabetes> {
     contents: Type;
@@ -76,3 +79,32 @@ class NameChecker extends  Checkable {
    
   const b = new Boxer("hello!", 22);
   console.log("BOXER DETAILS: ", b.content, b.contents)
+
+  // function IsPositive() {
+  //   return function (object: Object, propertyName: string) {
+  //     registerDecorator({
+  //       name: 'isPositive',
+  //       target: object.constructor,
+  //       propertyName: propertyName,
+  //       validator: {
+  //         validate(value: number) {
+  //           return value > 0; // Validation logic
+  //         },
+  //         defaultMessage() {
+  //           return 'Value must be positive';
+  //         }
+  //       }
+  //     });
+  //   };
+  // }
+
+  function passwordConstraints(str: string): string {
+    const passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[!-\/:-@[-`{-~]).{8,30}$/;
+    const passwordKeyword = /password/i;
+    if (passwordKeyword.test(str)) return "false" 
+    return passwordRegex.test(str) ? "true" : "false";
+  }
+
+  console.log('pass:', passwordConstraints('Sword@2123'))
+
+  
