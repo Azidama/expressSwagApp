@@ -42,17 +42,5 @@ const onError = (error) =>{
 
 task1().then(data => onResolve(data)).catch(error => onError(error))
 task2().then(error => onError(error))
-class Base {
-    k = 4;
-  }
+
    
-  class Derived extends Base {
-    constructor() {
-      console.log(this.k);
-//   'super' must be called before accessing 'this' in the constructor ofte a derived class.
-      super();
-    }
-  }
-  const driver = new Derived
-  console.log(driver.k)
-  
