@@ -5,28 +5,28 @@
 // const logger = require('morgan');
 import createError from 'http-errors';
 import express from 'express';
-import cookieParser from 'cookie-parser';
-import morgan from 'morgan';
-import { indexRouter } from './routes/index.js';
-import { usersRouter } from './routes/users.js';
-import { join, dirname } from 'path'
-import { fileURLToPath } from 'url';
+// import cookieParser from 'cookie-parser';
+// import morgan from 'morgan';
+import { indexRouter } from './routes/index.ts';
+// import { usersRouter } from './routes/users.ts';
+// import { join, dirname } from 'path'
+// import { fileURLToPath } from 'url';
 import swaggerUiExpress from 'swagger-ui-express';
 import { swaggerSpec } from './swagger.js';
 // const indexRouter = require('./routes/index');
 // const usersRouter = require('./routes/users');
 
 const app = express();
-const __dirname = dirname(fileURLToPath(import.meta.url));
-// view engine setup
-app.set('views', join(__dirname, 'views'));
-app.set('view engine', 'jade');
+// const __dirname = dirname(fileURLToPath(import.meta.url));
+// // view engine setup
+// app.set('views', join(__dirname, 'views'));
+// app.set('view engine', 'jade');
 
-app.use(morgan('dev'));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
-app.use(express.static(join(__dirname, 'public')));
+// app.use(morgan('dev'));
+// app.use(express.json());
+// app.use(express.urlencoded({ extended: false }));
+// app.use(cookieParser());
+// app.use(express.static(join(__dirname, 'public')));
 
 app.use('/api', indexRouter);
 app.use('/api-docs', swaggerUiExpress.serve, swaggerUiExpress.setup(swaggerSpec))

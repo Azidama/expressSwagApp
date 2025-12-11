@@ -4,8 +4,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "node ./bin/www",
-    "dev": "node app.js",
+    "build": "tsc && rename 'dist/**/*.js' dist/**/*.cjs",
+    "start": " npm run build && node dist/app.js", 
+    "dev": "tsx watch src/app.ts",
     "swagger": "node ./swagger.js"
   },
   "dependencies": {
@@ -19,5 +20,9 @@
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^5.0.1",
     "ts-node": "^10.9.2"
+  },
+  "devDependencies": {
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3"
   }
 }
