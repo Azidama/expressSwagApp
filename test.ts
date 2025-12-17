@@ -78,10 +78,3 @@ setImmediate(() => {
 // C
 // B
 // F
-
-// React's way of lazily loading components using lazy + Suspense:
-// const HeavyComponent = React.lazy(() => import('./HeavyComponent'))
-
-// <Suspense fallback={<Spinner />}>
-//   <HeavyComponent />
-// </Suspense>
