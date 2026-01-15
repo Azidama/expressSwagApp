@@ -1,5 +1,6 @@
 # Reading material 
 ## React
+### React lazy load components
 React's way of lazily loading components using lazy + Suspense:
 
 ```js
@@ -7,6 +8,26 @@ const HeavyComponent = React.lazy(() => import('./HeavyComponent'))
 <Suspense fallback={<Spinner />}>
   <HeavyComponent />
 </Suspense>
+```
+### React debounce function example
+```js
+function useDebounce(value, delay) {
+  const [debouncedValue, setDebouncedValue] = useState(value);
+
+  useEffect(() => {
+    const handler = setTimeout(() => {
+      setDebouncedValue(value);
+    }, delay);
+
+    return () => {
+      clearTimeout(handler);
+    };
+  }, [value, delay]);
+
+  return debouncedValue;
+}
+
+export { useDebounce };
 ```
 ## Dependency Injection
 Dependency Injection is a runtime system that injects dependencies into classes based on a dependency graph, avoiding manual instantiation and enabling decoupling and testability.
