@@ -76,3 +76,34 @@ export class CourseResolver {
 <li> CourseResolver asks for CourseService → Nest sees the token, gives the instance
 
 <li> Nest handles instantiation order automatically
+
+## Web performance metrics measurements
+### Web performance APIs
+
+#### performance.now()
+<p>A way to measure performance of your code in ms:</p>
+
+```js
+const start = performance.now();  
+// Run some code here  
+const end = performance.now();  
+
+console.log(`Execution time: ${end - start}ms`);
+```
+<p>Note: performance.now() returns the time in ms since the page loaded.</p>
+
+#### Performance Timing API
+
+```js
+let [navigationTiming] = performance.getEntriesByType("navigation");
+
+if (navigationTiming instanceof PerformanceNavigationTiming) {
+  // Calculate time from navigation start to DOM content loaded
+  const pageLoadTime =
+    navigationTiming.domContentLoadedEventEnd - navigationTiming.startTime;
+
+  console.log("DOM Content Loaded Time:", pageLoadTime, "ms");
+}
+```
+
+<p>Note: Key metrics you can track with this API are DNS lookup time - or in other words the connection speed, Time to First Byte (TTFB) - or server response speed, and DOMContentLoaded - or in other words, when the page is ready for interaction.</p>
