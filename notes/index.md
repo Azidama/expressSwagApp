@@ -107,3 +107,23 @@ if (navigationTiming instanceof PerformanceNavigationTiming) {
 ```
 
 <p>Note: Key metrics you can track with this API are DNS lookup time - or in other words the connection speed, Time to First Byte (TTFB) - or server response speed, and DOMContentLoaded - or in other words, when the page is ready for interaction.</p>
+
+#### PerformanceObserver
+<p>This API listens for performance events such as layout shifts, long tasks, and user interactions</p>
+<p>And what can this API track? Well, it can track long tasks - or in other words, JavaScript that blocks rendering, layout shifts to detect UI jank, and First Input Delay (FID) - or how fast a page responds to user input.</p>
+
+```js
+const observer = new PerformanceObserver((list) => {  
+  list.getEntries().forEach((entry) => {  
+    console.log(`Long task detected: ${entry.duration}ms`);  
+  });  
+});  
+
+observer.observe({ type: "longtask", buffered: true });
+```
+
+|Performance API |	Best For |
+|:----------|:----------:|
+|performance.now() |	Precise timing of functions and scripts|
+|Performance Timing API |	Measuring full page load performance|
+|Performance Observer |	Real-time monitoring of interactions, long tasks, and rendering|
