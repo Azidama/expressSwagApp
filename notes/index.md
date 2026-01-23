@@ -99,6 +99,16 @@ export class CourseResolver {
 
 <li> Nest handles instantiation order automatically
 
+## Testing
+
+There are two types of testing approaches that you should be aware of in software development. Those approaches are TDD (Test-Driven Development) and BDD (Behavior-Driven Development).
+
+### Test-Driven Development (TDD)
+Test-Driven Development is a methodology that emphasizes writing tests first before building out the features for an application.
+
+### Behavior-Driven Development (BDD)
+Behavior-Driven Development is the approach of aligning a series of tests with business goals. These tests should be written in a language that can be understood by both technical and non-technical individuals.
+
 ## Web performance metrics measurements
 ### Web performance APIs
 
@@ -150,44 +160,3 @@ observer.observe({ type: "longtask", buffered: true });
 |Performance Timing API |	Measuring full page load performance|
 |Performance Observer |	Real-time monitoring of interactions, long tasks, and rendering|
 
-
-## JS DOM Manipulation
-
-### 1. Select Elements
-```javascript
-const el = document.getElementById('myId');
-const el2 = document.querySelector('.myClass');
-```
-
-### 2. Modify Content
-```javascript
-el.innerHTML = '<strong>New HTML</strong>';
-el.textContent = 'New text';
-```
-
-### 3. Attributes
-```javascript
-img.setAttribute('src', 'image.jpg');
-img.removeAttribute('alt');
-```
-
-### 4. Styles & Classes
-```javascript
-el.classList.add('newClass');
-el.style.backgroundColor = 'black';
-```
-
-### 5. Create/Remove Elements
-```javascript
-const newEl = document.createElement('p');
-newEl.textContent = 'New paragraph';
-container.appendChild(newEl);
-container.removeChild(newEl);
-```
-
-### 6. Event Listeners
-```javascript
-button.addEventListener('click', () => {
-    alert('Clicked!');
-});
-```
