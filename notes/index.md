@@ -29,6 +29,28 @@ function useDebounce(value, delay) {
 
 export { useDebounce };
 ```
+## SOLID Principles
+<p>Short explaination of what SOLID means and does:</p>
+
+* **S – Single Responsibility**
+  <p>One class = one job.</p>
+
+* **O – Open/Closed**
+  <p>Add new stuff without changing old code.</p>
+
+* **L – Liskov Substitution**
+  <p>Child classes shouldn’t break parent behavior.</p>
+      <p>or</p>
+  <p>Subclasses must be replaceable for their base class.</p>
+  <p>NOTE: A subclass can do more, but it must not do less or behave differently where the parent is expected.</p>
+
+* **I – Interface Segregation**
+  <p>Don’t force unused methods.</p>
+
+* **D – Dependency Inversion**
+  <p>Depend on interfaces, not implementations.</p>
+
+
 ## Dependency Injection
 Dependency Injection is a runtime system that injects dependencies into classes based on a dependency graph, avoiding manual instantiation and enabling decoupling and testability.
 
@@ -127,3 +149,45 @@ observer.observe({ type: "longtask", buffered: true });
 |performance.now() |	Precise timing of functions and scripts|
 |Performance Timing API |	Measuring full page load performance|
 |Performance Observer |	Real-time monitoring of interactions, long tasks, and rendering|
+
+
+## JS DOM Manipulation
+
+### 1. Select Elements
+```javascript
+const el = document.getElementById('myId');
+const el2 = document.querySelector('.myClass');
+```
+
+### 2. Modify Content
+```javascript
+el.innerHTML = '<strong>New HTML</strong>';
+el.textContent = 'New text';
+```
+
+### 3. Attributes
+```javascript
+img.setAttribute('src', 'image.jpg');
+img.removeAttribute('alt');
+```
+
+### 4. Styles & Classes
+```javascript
+el.classList.add('newClass');
+el.style.backgroundColor = 'black';
+```
+
+### 5. Create/Remove Elements
+```javascript
+const newEl = document.createElement('p');
+newEl.textContent = 'New paragraph';
+container.appendChild(newEl);
+container.removeChild(newEl);
+```
+
+### 6. Event Listeners
+```javascript
+button.addEventListener('click', () => {
+    alert('Clicked!');
+});
+```
