@@ -99,15 +99,6 @@ export class CourseResolver {
 
 <li> Nest handles instantiation order automatically
 
-## Testing
-
-There are two types of testing approaches that you should be aware of in software development. Those approaches are TDD (Test-Driven Development) and BDD (Behavior-Driven Development).
-
-### Test-Driven Development (TDD)
-Test-Driven Development is a methodology that emphasizes writing tests first before building out the features for an application.
-
-### Behavior-Driven Development (BDD)
-Behavior-Driven Development is the approach of aligning a series of tests with business goals. These tests should be written in a language that can be understood by both technical and non-technical individuals.
 
 ## Web performance metrics measurements
 ### Web performance APIs
