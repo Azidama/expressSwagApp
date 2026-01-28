@@ -11,6 +11,31 @@ Behavior-Driven Development is the approach of aligning a series of tests with b
 ### Unit Testing
 <p>Testing a single “unit” of code (usually a function, method, or small module) in isolation to verify it behaves as expected. This is why Single responsibility principle for code is said to be useful for testing.</p>
 
+An example of mocking a db + its function and stubbing a fake value that postService can use (both the mocked function and the stubbed value)
+
+```javascript
+import { postService } from "./postService";
+import { db } from "./db";
+
+jest.mock("./db", () => ({
+  db: {
+    fetchPosts: jest.fn(),
+  },
+}));
+
+test("should return stubbed posts", async () => {
+  const fakePosts = [
+    { id: 1, title: "Stubbed Post", content: "This is a stubbed post." },
+  ];
+
+  db.fetchPosts.mockResolvedValue(fakePosts);
+
+  const posts = await postService.getPosts();
+
+  expect(posts).toEqual(fakePosts);
+});
+```
+
 #### Mocking, Faking, and Stubbing
 - Mock
     <p>
