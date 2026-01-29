@@ -83,3 +83,19 @@ Different types of performance testing:
 * **Soak (endurance) testing:** runs high load **for a long time** to catch memory leaks and slow degradation.
 * **Spike testing:** suddenly **jumps load up and down** to see how the system reacts.
 * **Breakpoint (capacity) testing:** gradually increases load until the system **starts to fail** to find max capacity.
+
+### A/B Testing
+**A/B testing** is:
+
+> Comparing **two versions** of a webpage, app, or feature (A vs B) to see **which performs better** for a specific goal.
+
+Key points:
+
+* Users are randomly split between **version A** (control) and **version B** (variant)
+* Metrics tracked: clicks, conversions, engagement, etc.
+* Goal: **data-driven decisions** instead of guesses
+* Often used in UI/UX, marketing, product optimization
+
+**Short:**
+
+> A/B testing = experiment with two versions to see which one works best.
