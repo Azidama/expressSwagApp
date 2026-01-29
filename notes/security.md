@@ -1,4 +1,13 @@
 # Security
+### Principles
+
+* **Confidentiality:** ensures sensitive data is only accessible to the intended recipient and not exposed to others.
+* **Integrity:** ensures data cannot be altered or tampered with by unauthorized parties.
+* **Authentication:** verifies the identity of a user or system before granting access.
+* **Authorization:** determines what actions or resources an authenticated user is allowed to access.
+* **Availability:** ensures that systems, services, and data are accessible to authorized users when needed.
+* **Non-repudiation:** provides proof that a sender sent a message or performed an action, preventing denial later.
+
 ## Common web attacks
 ### Types
 #### Cross-site Scripting (XSS)
