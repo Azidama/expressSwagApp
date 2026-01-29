@@ -99,3 +99,33 @@ Key points:
 **Short:**
 
 > A/B testing = experiment with two versions to see which one works best.
+
+Here’s a **detailed but still concise version** for notes:
+
+---
+
+
+### **Regression Testing**
+
+* **Definition:** Systematically re-running tests on an application after changes (bug fixes, enhancements, configuration updates) to ensure that existing functionality still works as expected.
+* **Purpose:** Catch unintended side effects before they reach users.
+
+#### **Regression**
+
+* Occurs when **new changes break existing functionality** in an application.
+
+#### **Tools**
+
+* Puppeteer, Playwright, Selenium, Cypress.
+
+#### **Techniques**
+
+1. **Unit regression testing** – test a **specific set of critical items** each time changes are made.
+2. **Partial regression testing** – test **specific parts** of the app affected by recent changes.
+3. **Complete regression testing** – test **all functionalities affected** by code changes; most thorough and time-consuming.
+
+#### **Retesting vs Regression**
+
+* **Retesting:** verify that **specific known issues** have been fixed.
+* **Regression testing:** checks for **new, unexpected issues** introduced by recent changes.
+
