@@ -75,3 +75,11 @@ non-functional testing focuses on things like performance and reliability.
 
 ### Usability Testing vs functional testing
 It is important to note that functional testing is not the same as usability testing. Functional testing focuses on the functionality of the application while usability testing focuses on the intuitiveness of the application by users.
+
+### Performance Testing
+Different types of performance testing:
+* **Load testing:** checks how the system performs under **normal and peak expected traffic**.
+* **Stress testing:** pushes the system **beyond its limits** to find breaking points.
+* **Soak (endurance) testing:** runs high load **for a long time** to catch memory leaks and slow degradation.
+* **Spike testing:** suddenly **jumps load up and down** to see how the system reacts.
+* **Breakpoint (capacity) testing:** gradually increases load until the system **starts to fail** to find max capacity.
