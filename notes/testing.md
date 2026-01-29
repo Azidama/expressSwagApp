@@ -72,3 +72,6 @@ non-functional testing focuses on things like performance and reliability.
 </p>
 
 <p>The four common types of usability testing are <b>explorative</b>, <b>comparative</b>, <b>assessment</b> and <b>validation</b> testing.</p>
+
+### Usability Testing vs functional testing
+It is important to note that functional testing is not the same as usability testing. Functional testing focuses on the functionality of the application while usability testing focuses on the intuitiveness of the application by users.
