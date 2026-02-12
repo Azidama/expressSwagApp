@@ -29,6 +29,36 @@ function useDebounce(value, delay) {
 
 export { useDebounce };
 ```
+### Layouts in React
+<p>A layout is a reusable wrapper that defines the page structure (header, sidebar, footer, main area) and displays page content inside it.</p>
+
+<p>Essentially we use it to define the skeleton of the pages.</p>
+<p>a single global layout:</p>
+
+```js
+function App() {
+  return (
+    <SidebarLayout>
+      <Routes>
+        ...
+      </Routes>
+    </SidebarLayout>
+  )
+}
+
+```
+<p>multiple layouts pattern in routes:</p>
+
+```js
+<Route element={<SidebarLayout />}>
+  <Route path="/dashboard" element={<Dashboard />} />
+  <Route path="/settings" element={<Settings />} />
+</Route>
+
+<Route element={<AuthLayout />}>
+  <Route path="/login" element={<Login />} />
+</Route>
+```
 ## SOLID Principles
 <p>Short explaination of what SOLID means and does:</p>
 
